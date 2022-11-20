@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Регистр ОНМК</title>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+   <form action="/"> 
+<h1>ПРОТОКОЛ ПАЦИЕНТА С ИШЕМИЧЕСКИМ ИНСУЛЬТОМ</h1>
+<div class="card bg-lightgrey">
+<div class="demo">
+<div class="txt"><strong>Паспортные и демографические данные</strong></div>  
+<table class="table">
+    <tr>
+<td><label for="num">№ ИБ</label></td>
+<td><label for="admission">Дата и время поступления</label></td>
+<td><label for="lname">Фамилия</label></td>
+<td><label for="fname">Имя</label></td>
+<td><label for="sname">Отчество</label></td>
+<td><label for="sex">Пол</label></td>
+<td><label for="age">Возраст</label></td>
+    </tr>
+    <tr>
+<td><input type="text" id="num" placeholder="..."></td>
+    <td><input type="datetime-local" name="" id="admission"></td>
+    <td><input type="text" name="" id="lname"></td>
+    <td><input type="text" name="" id="fname"></td>
+    <td><input type="text" name="" id="sname"></td>
+    <td><select name="" id="sex">
+        <option value="m">муж</option>
+            <option value="f">жен</option>
+        </td>  
+<td><input type="number" name="" id="age"></td>  
+</tr>
+</table> 
+<div><label for="address">Адрес:</label>
+<input type="text" name="" id="address"></div>
+<div><label for="phone">Контактный телефон:</label>
+    <input type="tel" name="" id="phone"></div>
+    <div><label for="polyclinic">Поликлиника №:</label>
+        <input type="text" name="" id="polyclinic"></div>
+    </div>
+</div>
+<div class="card bg-lightgrey">
+        <table class="table">
+            <tr>
+               <div class="txt"><label for="transfer"><strong>Кем доставлен</strong></label></div>
+            </tr>
+            <br>
+            <tr>
+<select name="" id="transfer">
+    <option value="1">Самостоятельно</option>
+    <option value="2">СМП</option>
+    <option value="3">Переведен из ЛПУ</option>
+    <option value="4">Переведен из отделения</option>
+            </tr>
+        </table>
+        <div><label for="diagnosis">Диагноз при поступлении:</label>
+        <textarea id="diagnosis" rows="1" cols="110"> </textarea></div>
+        <table class="table">
+            <tr>
+<td><label for="onset">Время начала<br>симптомов</label></td>
+<td><label for="FMC">Первичный<br>медицинский контакт</label></td>
+<td><label for="vistime">Время выполнения<br>КТ/МРТ</label></td>
+<td><label for="constime">Время консилиума</label></td>
+<td><label for="NIHSS">Оценка по шкале<br>NIHSS</label></td>
+<td><label for="Glasgo">Оценка по шкале ком<br>Глазго</label></td>
+            </tr>
+            <tr>
+                <td><input type="datetime-local" name="" id="onset"></td>
+                <td><input type="datetime-local" name="" id="FMC"></td>
+                <td><input type="datetime-local" name="" id="vistime"></td>
+                <td><input type="datetime-local" name="" id="constime"></td>
+                <td><input type="number" name="" id="NIHSS"></td>
+                <td><input type="number" name="" id="Glasgo"></td>
+                </tr>
+        </table>
+    </div>
+    <div class="card bg-lightgrey">
+        <div class="txt"><strong>Данные КТ/КТА</strong></div>  
+        <table class="table">
+            <tr>
+<td><label for="ASPECTS">Оценка по шкале ASPECTS<br>баллы)</label></td>
+<td><label for="location">Локализация поражения<br>(сегмент)</label></td>
+<td><label for="collaterals">Оценка коллатерального<br>кровотока</label></td>
+            </tr>
+            <tr>
+<td><input type="number" name="" id="ASPECTS"></td>
+<td><select name="" id="location">
+    <option value="CCA">ОСА</option>
+    <option value="MCA">СМА</option>
+    <option value="ACA">ПМА</option>
+    <option value="PL">ВББ</option>
+    <option value="none">нет</option>
+</select></td>
+<td><select name="" id="collaterals">
+    <option value="perfect">хороший</option>
+    <option value="good">удовлетворительный</option>
+    <option value="bad">неудовлетворительный</option>
+</select></td>
+            </tr>
+        </table>
+    </div>
+    <div class="card bg-lightgrey">
+        <div class="txt"><strong>Лечение: ТЛТ</strong></div>
+        <table class="table">
+            <tr>
+<td><label for="TLTstart">Начало ТЛТ</label></td>
+<td><label for="TLTend">Окончание ТЛТ</label></td>
+<td><label for="NIHSSstart">NIHSS до ТЛТ</label></td>
+<td><label for="NIHSSend">NIHSS после ТЛТ</label></td>
+<td><label for="complications">Осложнения</label></td>
+            </tr>
+            <tr>
+<td><input type="datetime-local" name="" id="TLTstart"></td>
+<td><input type="datetime-local" name="" id="TLTend"></td>
+<td><input type="number" name="" id="NIHSSstart"></td>
+<td><input type="number" name="" id="NIHSSend"></td>
+<td><textarea name="" id="complications" cols="30" rows="1"></textarea></td>
+            </tr>
+           <tr><td><input type="checkbox" name="" id="noTLT"><label for ="noTLT">не проводилась</label> </td></tr>
+        </table>
+    </div>
+    <div class="card bg-lightgrey">
+        <div class="txt"><strong>Лечение: эндоваскулярное</strong></div>
+        <table class="table">
+            <tr>
+                <td><label for="punction">Время пункции</label></td>
+                <td><label for="enLoc">Локализация поражения<br>(сегмент)</label></td>
+                <td><label for="TEsystem">Тип системы</label></td>
+                <td><label for="guide">Проводниковый катетер</label></td>
+                <td><label for="aspi">Аспирационный катетер</label></td>
+                <td><label for="retriever">Ретривер</label></td>
+                <td><label for="flowtime">Время восстановления кровотока</label></td>
+                <td><label for="noflow">Кровоток не восстановлен</label></td>
+            </tr>
+            <tr>
+                <td><input type="datetime-local" name="" id="punction"></td>
+                <td><select name="" id="enLoc">
+                    <option value="CCA">ОСА</option>
+                    <option value="MCA">СМА</option>
+                    <option value="ACA">ПМА</option>
+                    <option value="PL">ВББ</option>
+                    <option value="none">нет</option>
+                </select></td>
+                <td><select name="" id="TEsystem">
+                    <option value="ТЭ">тромбэкстр.</option>
+                        <option value="ТА.">тромбаспир.</option>
+                        <option value="ТЭ+ТА">экстр.+аспир</option>
+                    </td> 
+                    
+                <td><input type="text" name="" id="guide"></td>
+                <td><input type="text" name="" id="aspi"></td>
+                <td><input type="text" name ="" id="retriever"></td>
+                <td><input type="datetime-local" name="" id="flowtime"></td>
+                <td><input type="checkbox" name="" id="noflow"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="card bg-lightgrey">
+        <div class="txt"><strong>Результат лечения</strong></div>
+        <table class="table">
+            <tr>
+<td><label for="discharge">Выписан (дата)</label></td>
+<td><label for="NIHSSfin">NIHSS</label></td>
+<td><label for="compl">Осложнения</label></td>
+<td><label for="trans">Переведен (дата)</label></td>
+<td><label for="death">Дата смерти</label></td>
+            </tr>
+                <td><input type="datetime-local" name="" id="discharge"></td>
+                <td><input type="number" name="" id="NIHSSfin"></td>
+                <td><input type="text" name="" id="compl"></td>
+                <td><input type="datetime-local" name="" id="trans"></td>
+                <td><input type="datetime-local" name="" id="death"></td>
+        </table>
+    </div>
+        <div><label for="doc"><strong>Врач, заполнивший протокол:</strong></label>
+            <textarea id="doc" rows="1" cols="100"> </textarea></div>
+            <div><input class="btn" type="submit" value="Отправить"></div>
+   </form> 
+</div>
+</body>
+</html>
